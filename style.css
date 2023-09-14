@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6, p, a, ul, ol, li, small
 
 body {
     width: 100%;
-    max-width: 960px;
+    /* max-width: 960px; */
     margin: 0 auto;
     font-family: Times, Times New Roman, Georgia, serif;
 }
@@ -19,8 +19,9 @@ body {
 /* Make the nav take up the whole body width, and give it some top and bottom margin space */
 nav {
     width: 100%;
-    margin: 20px 0; 
-
+    max-height: fit-content;
+    margin: 0px 0; 
+    margin-bottom: 10px;
 }
 /* Make the list of links take up the whole width of the nav */
 nav ul {
@@ -37,7 +38,7 @@ nav li {
     text-decoration: none;
     display: inline;
     padding: 0 20px 0 20px;
-    width:20%;
+    width:15%;
 }
 
 nav ul li a {
@@ -49,14 +50,51 @@ nav ul li a {
 
 }
 
-header{
-
-    color: #ffffff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #e8491d 3px solid;
+/* Reset default list styles */
+ul.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
+/* Style the navigation bar */
+.navbar {
+  background-color: black;
+  min-height: 70px;
+  border-bottom: 3px solid #ffffff;
+  text-align: center;
+  justify-content: space-between;
+  /* Center the items horizontally */
+}
+.main{
+  max-width: 916px;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Style the navigation items */
+.nav-item {
+  display: inline-block;
+  margin-top: 10px;
+  /* Display items in a horizontal line */
+  margin: 0 15px;
+    margin-top: 10px;
+    margin-right: 50px;
+  font-size: 16px;
+}
+
+.nav-item a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  border-radius: 10px;
+}
+
+.nav-item a:hover {
+  color: #ffae63;
+  /* Change color on hover */
+}
 header nav ul li a,
 header nav ul li a:focus,
 header nav ul li a:visited,
@@ -65,7 +103,7 @@ header nav ul li a:active{
 
     text-align: center;
     padding: 8px 0;
-    border-bottom: #e8491d 3px solid;
+    border-bottom: black 3px solid;
     background:#35424a;
     font-weight:bold;
     font-size:15px;
@@ -78,7 +116,7 @@ header nav ul li a:active{
 footer {
     padding: 20px;
     margin-top: 20px;
-    border-top: #e8491d 3px solid;
+    border-top: black 3px solid;
     background-color: lightgray;
     text-align: right;
     
@@ -103,7 +141,7 @@ aside{
     width:200px;
     float:right;
     text-align:center;
-    border-bottom:#e8491d solid 5px;
+    border-bottom:black solid 5px;
     background:lightgray; 
     margin-left:10px;
 }
@@ -162,7 +200,7 @@ aside#sidebar{
     float:right;
     width:30%;
     margin-top:10px;
-    background:#e8491d;
+    background:black;
   }
   
   aside#sidebar .contactForm input, aside#sidebar .contactForm textarea{
@@ -201,7 +239,7 @@ aside#sidebar{
 
   .button {
     height: 38px;
-    background: #e8491d;
+    background: black;
     border: 0;
     padding-left: 20px;
     padding-right: 20px;
@@ -216,7 +254,7 @@ table {
   }
   
   td, th {
-    border: 1px solid #e8491d;
+    border: 1px solid black;
     text-align: left;
     padding: 8px;
     border-style: dotted;
@@ -248,7 +286,7 @@ table {
     margin-right:40px;
     padding:10px;
     text-align: center;
-    border-bottom:#e8491d solid 5px;
+    border-bottom:black solid 5px;
   }
 
   .mainHeading{
@@ -313,7 +351,7 @@ table {
         text-decoration: none;
         text-align: left;
         padding: 8px 0;
-        border-bottom: #e8491d 3px solid;
+        border-bottom: black 3px solid;
         background:#35424a;
         font-weight:bold;
         font-size:15px;
